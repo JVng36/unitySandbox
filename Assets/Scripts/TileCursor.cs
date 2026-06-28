@@ -34,5 +34,18 @@ public class TileCursor : MonoBehaviour
         {
             FarmManager.Instance.HoeTile(cell);
         }
+        if (Keyboard.current.rKey.wasPressedThisFrame)
+        {
+            FarmManager.Instance.WaterTile(cell);
+        }
+        if (Keyboard.current.qKey.wasPressedThisFrame)
+        {
+            FarmManager.Instance.TryUntillTile(cell);
+        }
+        if (Keyboard.current.tKey.wasPressedThisFrame)
+        {
+            FarmManager.Instance.ResetTile(cell);  
+        }
+
     }
 }
